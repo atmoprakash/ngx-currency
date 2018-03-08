@@ -1,0 +1,9 @@
+<input (blur)="valueChange()"
+       (cut)="clearFormat()"
+       (keydown)="handleKeydown($event)"
+       (focus)="clearFormat()"
+       (paste)="paste($event.clipboardData.getData('text/plain'))"
+       [formControl]="amountFormControl"
+       type="text"
+       [(ngModel)]="amount" style="text-align: right"
+       (click)="$event.target.select()">
